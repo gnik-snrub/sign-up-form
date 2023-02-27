@@ -25,21 +25,37 @@
         <form onsubmit="return false">
             <div>
                 <h2>Let's do this!</h2>
-                <label for="fname">First Name:</label>
-                <input type="text" id="fname" name="fname">
-                <label for="lname">Last Name:</label>
-                <input type="text" id="lname" name="lname">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <label for="phnum">Phone Number:</label>
-                <input type="tel" id="phnum" name="phnum">
-                <label for="pwd">Password:</label>
-                <input type="password" id="pwd" name="pwd">
-                <label for="pwdconfirm">Confirm Password:</label>
-                <input type="password" id="pwdconfirm" name="pwdconfirm">
+                <div class="column">
+                  <div class="inputWrapper">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname">
+                  </div>
+                  <div class="inputWrapper">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                  </div>
+                  <div class="inputWrapper">
+                    <label for="pwd">Password:</label>
+                    <input type="password" id="pwd" name="pwd">
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="inputWrapper">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname">
+                  </div>
+                  <div class="inputWrapper">
+                    <label for="phnum">Phone Number:</label>
+                    <input type="tel" id="phnum" name="phnum">
+                  </div>
+                  <div class="inputWrapper">
+                    <label for="pwdconfirm">Confirm Password:</label>
+                    <input type="password" id="pwdconfirm" name="pwdconfirm">
+                  </div>
+                </div>
             </div>
             <button>
-                Create Account
+               Begin your journey
             </button>
             <span>Already have an account? <a>Log in</a></span>
         </form>
