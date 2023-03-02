@@ -94,8 +94,19 @@ form .column {
 }
 
 .inputWrapper > input:not(:placeholder-shown):not(:focus):invalid {
-  border: 1px solid red;
+  border: 1px solid #EF3F1F;
   background-color: #F9F9F9;
+}
+
+#validpass {
+  visibility: hidden;
+  color: #EF3F1F;
+  margin-top: 8px;
+  margin-left: 7px;
+}
+
+#validpass.invalid {
+  visibility: visible;
 }
 
 button {
