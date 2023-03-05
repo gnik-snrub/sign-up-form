@@ -21,44 +21,42 @@
         </p>
         <span>Sign up now to get started!</span>
         <form onsubmit="return false">
-            <div>
-                <h2>Let's do this!</h2>
-                <div class="column">
-                  <div class="inputWrapper">
-                    <label for="fname">First Name*</label>
-                    <input type="text" id="fname" name="fname" placeholder="John" required>
-                  </div>
-                  <div class="inputWrapper">
-                    <label for="email">Email*</label>
-                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
-                  </div>
-                  <div class="inputWrapper">
-                    <label for="pwd">Password*</label>
-                    <input type="text" id="pwd" name="pwd" placeholder="******" required
-                    pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[^0-9a-zA-Z]).{5,}$" 
-                    oninvalid="this.setCustomValidity('Password must include a capital letter, number, and special character (!, ?, #, etc.)')"
-                    onfocusout="testValidation()">
-                  </div>
-                </div>
-                <div class="column">
-                  <div class="inputWrapper">
-                    <label for="lname">Last Name*</label>
-                    <input type="text" id="lname" name="lname" placeholder="Smith" required>
-                  </div>
-                  <div class="inputWrapper">
-                    <label for="phnum">Phone Number*</label>
-                    <input type="tel" id="phnum" name="phnum" placeholder="123-456-7890" required>
-                  </div>
-                  <div class="inputWrapper">
-                    <label for="pwdconfirm">Confirm Password*</label>
-                    <input type="password" id="pwdconfirm" name="pwdconfirm" placeholder="******" required
-                    pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[^0-9a-zA-Z]).{5,}$" 
-                    oninvalid="this.setCustomValidity('Password must include a capital letter, number, and special character (!, ?, #, etc.)')"
-                    onfocusout="testValidation()">
-                    <span id="validpass">Passwords do not match</span>
-                  </div>
-                </div>
+          <div>
+            <h2>Let's do this!</h2>
+            <div class="inputWrapper">
+              <label for="fname">First Name*</label>
+              <input type="text" id="fname" name="fname" placeholder="John" required>
             </div>
+            <div class="inputWrapper">
+              <label for="lname">Last Name*</label>
+              <input type="text" id="lname" name="lname" placeholder="Smith" required>
+            </div>
+            <div class="inputWrapper">
+              <label for="phnum">Phone Number*</label>
+              <input type="tel" id="phnum" name="phnum" placeholder="123-456-7890" required>
+            </div>
+            <div class="inputWrapper">
+              <label for="email">Email*</label>
+              <input type="email" id="email" name="email" placeholder="example@email.com" required>
+            </div>
+            <div class="inputWrapper">
+              <label for="pwd">Password*</label>
+              <input type="password" id="pwd" name="pwd" placeholder="******" required
+                pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[^0-9a-zA-Z]).{5,}$" 
+                oninvalid="this.setCustomValidity('Password must include a capital letter, number, and special character (!, ?, #, etc.)')"
+                onfocusout="testValidation()"
+              >
+            </div>
+            <div class="inputWrapper">
+              <label for="pwdconfirm">Confirm Password*</label>
+              <input type="password" id="pwdconfirm" name="pwdconfirm" placeholder="******" required
+                pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[^0-9a-zA-Z]).{5,}$" 
+                oninvalid="this.setCustomValidity('Password must include a capital letter, number, and special character (!, ?, #, etc.)')"
+                onfocusout="testValidation()"
+              >
+              <span id="validpass">Passwords do not match</span>
+            </div>
+          </div>
             <button>
                Begin your journey
             </button>
@@ -67,11 +65,15 @@
     </main>
     <script>
       const testValidation = () => {
-        if (document.getElementById('pwd').value === document.getElementById('pwdconfirm').value) {
-          document.getElementById('validpass').classList.remove('invalid')
+        const first = document.getElementById('pwd')
+        const conf = document.getElementById('pwdconfirm')
+        const warning = document.getElementById('validpass')
+        if (first.value === conf.value) {
+          validpass.classList.remove('invalid')
         } else {
-          document.getElementById('validpass').classList.add('invalid')
+          validpass.classList.add('invalid')
         }
+
       }
     </script>
 </body>
