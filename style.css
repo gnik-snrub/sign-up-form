@@ -50,7 +50,7 @@ form > div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-left: 43px;
+  padding: 10px 0 30px 43px;
   background-color: #FFFFFF;
   filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.3));
   margin-bottom: 35px;
@@ -68,20 +68,24 @@ form .column {
 }
 
 .inputWrapper {
-  width: 100%;
-  display: grid;
-  grid-template-rows: auto auto;
-  margin-bottom: 30px;
+  width: 50%;
+  height: 83px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: flex-start;
 }
 
 .inputWrapper > label {
   color: rgb(83, 83, 83);
   font-size: 90%;
   font-weight: 600;
+  width: 100%;
 }
 
 .inputWrapper > input {
   width: 70%;
+  height: min-content;
   border-radius: 5px;
   border: 1px solid lightgray;
   padding: 10px 7px;
@@ -99,14 +103,15 @@ form .column {
 }
 
 #validpass {
-  visibility: hidden;
+  opacity: 0%;
   color: #EF3F1F;
   margin-top: 8px;
   margin-left: 7px;
+  transition: 0.05s ease-in-out;
 }
 
 #validpass.invalid {
-  visibility: visible;
+  opacity: 100%;
 }
 
 button {
